@@ -1401,7 +1401,46 @@
 
               <ul>
                 <li class="pic1 img slide">
-                  <img src="${PRODUCT.CustomTypes.Image1}" />
+                  <img
+                    src="${PRODUCT.CustomFields.Image1}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image1isset}"
+                  />
+                </li>
+                <li class="pic2 img slide">
+                  <img
+                    src="${PRODUCT.CustomFields.Image2}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image2isset}"
+                  />
+                </li>
+                <li class="pic3 img slide">
+                  <img
+                    src="${PRODUCT.CustomFields.Image3}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image3isset}"
+                  />
+                </li>
+                <li class="pic4 img slide">
+                  <img
+                    src="${PRODUCT.CustomFields.Image4}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image4isset}"
+                  />
+                </li>
+                <li class="pic5 img slide">
+                  <img
+                    src="${PRODUCT.CustomFields.Image5}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image5isset}"
+                  />
+                </li>
+                <li class="pic6 img slide">
+                  <img
+                    src="${PRODUCT.CustomFields.Image6}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image6isset}"
+                  />
                 </li>
               </ul>
 
@@ -1409,27 +1448,45 @@
               <div class="thumb">
                 <label class="pic1 col-xs-3" for="slide1"
                   ><span class="anker"></span>
-                  <img src="${PRODUCT.CustomTypes.Image1}"
+                  <img
+                    src="${PRODUCT.CustomFields.Image1}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image1isset}"
                 /></label>
                 <label class="pic2 col-xs-3" for="slide2"
                   ><span class="anker"></span>
-                  <img src="${PRODUCT.CustomTypes.Image2}"
+                  <img
+                    src="${PRODUCT.CustomFields.Image2}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image2isset}"
                 /></label>
                 <label class="pic3 col-xs-3" for="slide3"
                   ><span class="anker"></span>
-                  <img src="${PRODUCT.CustomTypes.Image3}"
+                  <img
+                    src="${PRODUCT.CustomFields.Image3}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image3isset}"
                 /></label>
                 <label class="pic4 col-xs-3" for="slide4"
                   ><span class="anker"></span>
-                  <img src="${PRODUCT.CustomTypes.Image4}"
+                  <img
+                    src="${PRODUCT.CustomFields.Image4}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image4isset}"
                 /></label>
                 <label class="pic5 col-xs-3" for="slide5"
                   ><span class="anker"></span>
-                  <img src="${PRODUCT.CustomTypes.Image5}"
+                  <img
+                    src="${PRODUCT.CustomFields.Image5}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image5isset}"
                 /></label>
                 <label class="pic6 col-xs-3" for="slide6"
                   ><span class="anker"></span>
-                  <img src="${PRODUCT.CustomTypes.Image6}"
+                  <img
+                    src="${PRODUCT.CustomFields.Image6}"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image6isset}"
                 /></label>
                 <!-- Thumbnails -->
               </div>
@@ -1477,5 +1534,16 @@
       </div>
       <!-- Hintergrund -->
     </div>
+    <script>
+      const productImages = document.querySelectorAll(".product-img");
+
+      productImages.forEach((image) => {
+        const isSet = image.getAttribute("data-isset");
+
+        if (isSet === "false") {
+          image.style = "display: none;";
+        }
+      });
+    </script>
   </body>
 </html>

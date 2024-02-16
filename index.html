@@ -1551,17 +1551,23 @@
                 <label class="pic1 col-xs-3" for="slide1"
                   ><span class="anker"></span>
                   <img
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-1"
+                    src="image-missing"
+                    class="product-image"
+                    data-isset="false"
                 /></label>
                 <label class="pic2 col-xs-3" for="slide2"
                   ><span class="anker"></span>
                   <img
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-2"
+                    src="image-missing"
+                    class="product-image"
+                    data-isset="false"
                 /></label>
                 <label class="pic3 col-xs-3" for="slide3"
                   ><span class="anker"></span>
                   <img
                     src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-3"
+                    class="product-image"
+                    data-isset="true"
                 /></label>
                 <label class="pic4 col-xs-3" for="slide4"
                   ><span class="anker"></span>
@@ -1828,5 +1834,14 @@
       </div>
       <!-- Hintergrund -->
     </div>
+
+    <script>
+      const productImages = document.querySelectorAll(".product-image");
+      console.log(productImages);
+
+      productImages.forEach((image) => {
+        console.log(image.getAttribute("data-isset"));
+      });
+    </script>
   </body>
 </html>
