@@ -1497,7 +1497,7 @@
 
           <!-- Artikeldetails -->
           <div class="col-md-6 artdsc">
-            <h1>Motor 76950km für RENAULT MEGANE II K4M-812 7711368599</h1>
+            <h1>${PRODUCT.CustomFields.name}</h1>
             <p>
               Einzelne auf den Fotos abgebildeten Anbauteile sind eventuel nicht
               mit im Lieferumfang enthalten. Mitglieferte Anbauteile sind von
@@ -1508,11 +1508,17 @@
               >${PRODUCT.CustomFields.Lagernummer}
             </p>
             <p>
-              <span class="bold">Originale Ersatzteilnummer:: </span>N1101278
+              <span class="bold">Originale Ersatzteilnummer:: </span
+              >${PRODUCT.CustomFields.OriginaleErsatzteilnummer}
             </p>
-            <p><span class="bold">Laufleistung:: </span>N1101278</p>
-            <p><span class="bold">Baujahr:: </span>2006</p>
-            <p><span class="bold">Baujahr:: </span>2006</p>
+            <p>
+              <span class="bold">Laufleistung(km): </span
+              >${PRODUCT.CustomFields.LaufleistungKM}
+            </p>
+            <p>
+              <span class="bold">Treibstoffart: </span
+              >${PRODUCT.CustomFields.Brandstofftype}
+            </p>
 
             <h2>Artikeldetails</h2>
             <ul>
