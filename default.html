@@ -1358,7 +1358,10 @@
             "
           >
             <div class="col-md-3 logo">
-              <img src="img/logo.jpg" alt="" />
+              <img
+                src="https://currus-connect.fra1.cdn.digitaloceanspaces.com/img/logo.jpg"
+                alt=""
+              />
             </div>
           </div>
 
@@ -1398,9 +1401,7 @@
 
               <ul>
                 <li class="pic1 img slide">
-                  <img
-                    src="https://fenixapi-image.bosab.se/api/File/Download/1/N/1101278_1_N.jpg"
-                  />
+                  <img src="${PRODUCT.CustomTypes.Image1}" />
                 </li>
               </ul>
 
@@ -1408,23 +1409,27 @@
               <div class="thumb">
                 <label class="pic1 col-xs-3" for="slide1"
                   ><span class="anker"></span>
-                  <img
-                    src="https://fenixapi-image.bosab.se/api/File/Download/1/N/1101278_1_N.jpg"
+                  <img src="${PRODUCT.CustomTypes.Image1}"
                 /></label>
                 <label class="pic2 col-xs-3" for="slide2"
                   ><span class="anker"></span>
-                  <img
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-2"
+                  <img src="${PRODUCT.CustomTypes.Image2}"
                 /></label>
                 <label class="pic3 col-xs-3" for="slide3"
                   ><span class="anker"></span>
-                  <img
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-3"
+                  <img src="${PRODUCT.CustomTypes.Image3}"
                 /></label>
                 <label class="pic4 col-xs-3" for="slide4"
                   ><span class="anker"></span>
-                  <img
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-4"
+                  <img src="${PRODUCT.CustomTypes.Image4}"
+                /></label>
+                <label class="pic5 col-xs-3" for="slide5"
+                  ><span class="anker"></span>
+                  <img src="${PRODUCT.CustomTypes.Image5}"
+                /></label>
+                <label class="pic6 col-xs-3" for="slide6"
+                  ><span class="anker"></span>
+                  <img src="${PRODUCT.CustomTypes.Image6}"
                 /></label>
                 <!-- Thumbnails -->
               </div>
@@ -1441,7 +1446,10 @@
               mit im Lieferumfang enthalten. Mitglieferte Anbauteile sind von
               der Gewährleistung ausgeschlossen.
             </p>
-            <p><span class="bold">Lagernummer: </span>N1101278</p>
+            <p>
+              <span class="bold">Lagernummer: </span
+              >${PRODUCT.CustomFields.Lagernummer}
+            </p>
             <p>
               <span class="bold">Originale Ersatzteilnummer:: </span>N1101278
             </p>
