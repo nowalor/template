@@ -15,6 +15,11 @@
 
       /* Copyright 2024 HTML/CSS by webmarx | https://www.ebay.de/str/webmarx | eBay Auktionsvorlage Avis v. 1.2 */
 
+      .bold {
+        font-weight: bold;
+        font-size: 14px !important;
+      }
+
       .bg {
         margin: 0;
         padding: 30px 0;
@@ -46,7 +51,6 @@
       /* HEADER */
       .logo {
         height: 120px;
-        margin: 0;
         padding: 0;
         border: 1px solid #ececec;
         box-shadow: 2px 2px 0px #ccc;
@@ -262,8 +266,6 @@
       /* DROPDOWN*/
       ul.menu ul {
         display: none;
-        position: absolute;
-        top: 60px;
         z-index: 6;
         list-style-type: none;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -386,11 +388,11 @@
         box-sizing: border-box;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        padding-left: 6px;
+        padding-right: 20px;
       }
       /* Thumbnails */
       .artikelbilder.galerie > .thumb {
-        position: absolute;
-        left: 0;
         width: 100%;
         height: auto;
         z-index: 6;
@@ -525,11 +527,11 @@
       .artikelbilder.galerie > #slide16:checked ~ ul > .slide.pic16 {
         opacity: 1;
         z-index: 2;
+        position: absolute;
       }
       /* Animations */
       .artikelbilder.galerie > ul > .slide {
         display: inline-block;
-        position: absolute;
         left: 0;
         top: 0;
         opacity: 0;
@@ -578,17 +580,11 @@
         }
       }
       /* Größe */
-      .artikelbilder.galerie {
-        max-width: 500px;
-      }
-      .artikelbilder.galerie > ul {
-        height: 500px;
-      }
       .artikelbilder.galerie > ul > .slide.img img {
-        max-height: 500px;
         width: auto;
         margin: 0 auto;
       }
+
       .artikelbilder.galerie > .thumb > label img {
         max-height: 100px;
         width: auto;
@@ -1354,142 +1350,24 @@
         <!-- Header -->
         <div class="row header">
           <!-- Logo -->
-          <div class="col-md-3 logo">
-            <img src="img/logo.jpg" alt="" />
-          </div>
-
-          <!-- Right-Logo -->
-          <div class="col-md-9 box right-logo hidden-xs">
-            <!-- Suche -->
-            <div class="header-suche">
-              <a
-                target="_blank"
-                href="https://www.ebay.de/sch/autoteile.dk/m.html?_nkw=&_armrs=1&_ipg=&_from="
-                ><div class="suchfeld">Shop durchsuchen...</div>
-                <div class="suchbutton soh"><i class="fa fa-search"></i></div
-              ></a>
+          <div
+            style="
+              width: 100%;
+              background-color: #4bad32;
+              height: 145px;
+              padding: 12px;
+              border-radius: 5px;
+            "
+          >
+            <div class="col-md-3 logo">
+              <img
+                src="https://currus-connect.fra1.cdn.digitaloceanspaces.com/img/logo.jpg"
+                alt=""
+              />
             </div>
-
-            <!-- Topheader -->
-            <div class="topheader">
-              <ul>
-                <li>
-                  <a
-                    class="soh"
-                    target="_blank"
-                    href="https://www.ebay.de/str/makure"
-                    >Unser Shop</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="soh"
-                    target="_blank"
-                    href="https://www.ebay.de/str/makure?_tab=1"
-                    >Über Uns</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="soh"
-                    target="_blank"
-                    href="https://www.ebay.de/str/makure?_tab=2"
-                    >Bewertungen</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="soh"
-                    target="_blank"
-                    href="https://www.ebay.de/contact/sendmsg?message_type_id=14&recipient=autoteile.dk"
-                    >Kontakt</a
-                  >
-                </li>
-              </ul>
-              <!-- Topheader -->
-            </div>
-
-            <!-- Right-Logo -->
           </div>
 
           <!-- Header -->
-        </div>
-
-        <!-- Menubar -->
-        <div class="row box menubox">
-          <!-- Kategorien -->
-          <ul class="menu hidden-xs">
-            <li class="home">
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                ><i class="fa fa-home"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 1</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 2</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 3</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 4</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 5</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 6</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                >Kategorie 7</a
-              >
-            </li>
-            <!-- Kategorien -->
-          </ul>
-
-          <!-- Responsive -->
-          <ul class="resmenu hidden-lg hidden-md hidden-sm">
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure"
-                ><i class="fa fa-home"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure?_tab=1"
-                ><i class="fa fa-user"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.ebay.de/str/makure?_tab=2"
-                ><i class="fa fa-star"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.ebay.de/contact/sendmsg?message_type_id=14&recipient=autoteile.dk"
-                ><i class="fa fa-envelope"></i
-              ></a>
-            </li>
-            <!-- Responsive -->
-          </ul>
-
-          <!-- Menubar -->
         </div>
 
         <!-- Artikelbeschreibung -->
@@ -1522,30 +1400,39 @@
                 class="anker slide"
                 type="radio"
               />
+              <input
+                name="switch"
+                id="slide5"
+                class="anker slide"
+                type="radio"
+              />
+              <input
+                name="switch"
+                id="slide6"
+                class="anker slide"
+                type="radio"
+              />
 
               <ul>
                 <li class="pic1 img slide">
                   <img
-                    class="test"
                     src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-1"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image1isset}"
                   />
                 </li>
                 <li class="pic2 img slide">
                   <img
-                    class="test"
                     src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-2"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image2isset}"
                   />
                 </li>
                 <li class="pic3 img slide">
                   <img
-                    class="test"
                     src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-3"
-                  />
-                </li>
-                <li class="pic4 img slide">
-                  <img
-                    class="test"
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-4"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image3isset}"
                   />
                 </li>
               </ul>
@@ -1555,29 +1442,25 @@
                 <label class="pic1 col-xs-3" for="slide1"
                   ><span class="anker"></span>
                   <img
-                    src="image-missing"
-                    class="product-image"
-                    data-isset="false"
+                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-1"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image1isset}"
                 /></label>
                 <label class="pic2 col-xs-3" for="slide2"
                   ><span class="anker"></span>
                   <img
-                    src="image-missing"
-                    class="product-image"
-                    data-isset="false"
+                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-2"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image2isset}"
                 /></label>
                 <label class="pic3 col-xs-3" for="slide3"
                   ><span class="anker"></span>
                   <img
                     src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-3"
-                    class="product-image"
-                    data-isset="true"
+                    class="product-img"
+                    data-isset="${PRODUCT.CustomFields.Image3isset}"
                 /></label>
-                <label class="pic4 col-xs-3" for="slide4"
-                  ><span class="anker"></span>
-                  <img
-                    src="https://via.placeholder.com/500/eeeeee/999?text=Grafik-4"
-                /></label>
+
                 <!-- Thumbnails -->
               </div>
 
@@ -1587,46 +1470,50 @@
 
           <!-- Artikeldetails -->
           <div class="col-md-6 artdsc">
-            <h1>Artikelbeschreibung</h1>
+            <h1>${PRODUCT.CustomFields.name}</h1>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
+              Einzelne auf den Fotos abgebildeten Anbauteile sind eventuel nicht
+              mit im Lieferumfang enthalten. Mitglieferte Anbauteile sind von
+              der Gewährleistung ausgeschlossen.
+            </p>
+            <p>
+              <span class="bold">Lagernummer: </span
+              >${PRODUCT.CustomFields.Lagernummer}
+            </p>
+            <p>
+              <span class="bold">Originale Ersatzteilnummer:: </span
+              >${PRODUCT.CustomFields.OriginaleErsatzteilnummer}
+            </p>
+            <p>
+              <span class="bold">Laufleistung(km): </span
+              >${PRODUCT.CustomFields.LaufleistungKM}
+            </p>
+            <p>
+              <span class="bold">Treibstoffart: </span
+              >${PRODUCT.CustomFields.Brandstofftype}
             </p>
 
-            <h2>Artikeldetails</h2>
-            <ul>
-              <li>Merkmal 1</li>
-              <li>Merkmal 2</li>
-              <li>Merkmal 3</li>
-            </ul>
-
-            <h2>Varianten</h2>
-            <span class="var">S</span>
-            <span class="var">M</span>
-            <span class="var">L</span>
-            <span class="var">8 GB</span>
-            <span class="var">16 GB</span>
-            <span class="var">32 GB</span>
-            <span class="var">64 GB</span>
-
-            <h3>nur 0,00 € <span>(inkl. MwSt.)</span></h3>
-
-            <!-- SOFORT KAUFEN -->
-            <a
-              class="skb soh"
-              target="_blank"
-              href="https://www.ebay.de/bin/ctb?item=ITEM_ID"
-              ><i class="fa fa-shopping-basket"></i> Sofort-Kaufen</a
-            >
-
-            <!-- FRAGE STELLEN -->
-            <a
-              class="fsb soh"
-              target="_blank"
-              href="https://www.ebay.de/contact/sendmsg?message_type_id=14&recipient=autoteile.dk"
-              ><i class="fa fa-question-circle"></i> Frage stellen</a
-            >
+            <p>
+              <span class="bold">Model Jahr: </span
+              >${PRODUCT.CustomFields.ModelJahr}
+            </p>
+            <p>
+              <span class="bold">Fahrgestellnummer: </span
+              >${PRODUCT.CustomFields.Fahrgestellnummer}
+            </p>
+            <p>
+              <span class="bold">Motor Kennung: </span
+              >${PRODUCT.CustomFields.MotorKennung}
+            </p>
+            <p>
+              <span class="bold">Motortype: </span
+              >${PRODUCT.CustomFields.Motortype}
+            </p>
+            <p>
+              <span class="bold">Getriebe: </span
+              >${PRODUCT.CustomFields.Getriebe}
+            </p>
+            <p><span class="bold">Kba: </span>${PRODUCT.CustomFields.Kba}</p>
 
             <!-- Artikeldetails -->
           </div>
@@ -1634,217 +1521,19 @@
           <!-- Artikelbeschreibung -->
         </div>
 
-        <!-- Cross-Selling -->
-        <div class="row crosswrapper hidden-xs">
-          <div class="col-md-4 box">
-            <div class="row">
-              <div class="col-xs-6">
-                <h1>Marke</h1>
-                <h2>Produkt 1</h2>
-                <a target="_blank" href="https://www.ebay.de/str/makure">
-                  <h3 class="soh">zum Angebot</h3>
-                </a>
-              </div>
-              <div class="col-xs-6">
-                <img
-                  src="https://via.placeholder.com/150x180/eeeeee/999?text=Grafik"
-                  class="img-responsive"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 box">
-            <div class="row">
-              <div class="col-xs-6">
-                <h1>Marke</h1>
-                <h2>Produkt 2</h2>
-                <a target="_blank" href="https://www.ebay.de/str/makure">
-                  <h3 class="soh">zum Angebot</h3>
-                </a>
-              </div>
-              <div class="col-xs-6">
-                <img
-                  src="https://via.placeholder.com/150x180/eeeeee/999?text=Grafik"
-                  class="img-responsive"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 box">
-            <div class="row">
-              <div class="col-xs-6">
-                <h1>Marke</h1>
-                <h2>Produkt 3</h2>
-                <a target="_blank" href="https://www.ebay.de/str/makure">
-                  <h3 class="soh">zum Angebot</h3>
-                </a>
-              </div>
-              <div class="col-xs-6">
-                <img
-                  src="https://via.placeholder.com/150x180/eeeeee/999?text=Grafik"
-                  class="img-responsive"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- Cross-Selling -->
-        </div>
-
-        <!-- Tabs -->
-        <div class="tabs box">
-          <input type="radio" name="tabs" id="tab1" checked="" />
-          <label for="tab1"><span>Information</span></label>
-          <input type="radio" name="tabs" id="tab2" />
-          <label for="tab2"><span>Zahlung</span></label>
-          <input type="radio" name="tabs" id="tab3" />
-          <label for="tab3"><span>Versand</span></label>
-          <input type="radio" name="tabs" id="tab4" />
-          <label for="tab4"><span>Sonstiges</span></label>
-
-          <div id="tab-content1" class="tab-content">
-            <h1>Überschrift</h1>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor.
-
-            <ul>
-              <li>Merkmal</li>
-              <li>Merkmal</li>
-              <li>Merkmal</li>
-            </ul>
-          </div>
-
-          <div id="tab-content2" class="tab-content">
-            <h1>Zahlung</h1>
-            Bieten Sie Ihren Kunden verschiedene Zahlungsoptionen an. Sie können
-            hierfür z.B. die im Ordner "Grafiken" zur Verfügung gestellten
-            Bilder verwenden.
-          </div>
-
-          <div id="tab-content3" class="tab-content">
-            <h1>Versandoptionen</h1>
-            Bieten Sie Ihren Kunden verschiedene Versandoptionen an. Sie können
-            hierfür z.B. die im Ordner "Grafiken" zur Verfügung gestellten
-            Bilder verwenden.
-          </div>
-
-          <div id="tab-content4" class="tab-content">
-            <h1>Hinweis</h1>
-            <blockquote>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est.
-            </blockquote>
-            <h1>Wichtig</h1>
-            <code
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est.</code
-            >
-            <h1>Highlight</h1>
-            <mark
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est.</mark
-            >
-            <br /><br />
-            <h1>Fußnote</h1>
-            <small
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est.</small
-            >
-            <br /><br />
-            <h1>Tags</h1>
-            Nutzen Sie die Möglichkeit einzelne <kbd>Wörter</kbd> oder
-            <kbd>Merkmale</kbd> hervorzuheben und so <kbd>Tags</kbd> zu
-            erstellen.
-          </div>
-
-          <!-- Tabs -->
-        </div>
-
-        <!-- Footer -->
-        <div class="row footerwrapper hidden-xs">
-          <div class="col-md-4 box">
-            <h1>Links</h1>
-            <ul>
-              <li>
-                <a target="_blank" href="https://www.ebay.de/str/makure"
-                  ><i class="fa fa-home"></i> Alle Angebote</a
-                >
-              </li>
-              <li>
-                <a target="_blank" href="https://www.ebay.de/str/makure?_tab=1"
-                  ><i class="fa fa-user"></i> Über Uns</a
-                >
-              </li>
-              <li>
-                <a target="_blank" href="https://www.ebay.de/str/makure?_tab=2"
-                  ><i class="fa fa-star"></i> Bewertungen</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="https://www.ebay.de/contact/sendmsg?message_type_id=14&recipient=autoteile.dk"
-                  ><i class="fa fa-envelope"></i> Kontakt</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-4 box">
-            <h1>Überschrift</h1>
-            <p>
-              Die Inhalte der Vorlage können nach eigenem Belieben angepasst
-              werden. Nutzen Sie diesen Platz z.B. um weitere Hinweise für Ihre
-              Kunden darzustellen oder um Ihr Unternehmen sowie Ihre Angebote
-              und Services vorzustellen.
-            </p>
-          </div>
-
-          <div class="col-md-4 box">
-            <h1>Kontakt</h1>
-            <p>
-              Haben Sie Fragen zu unseren Angeboten? Kontaktieren Sie uns gerne
-              über das eBay Kontaktformular.
-            </p>
-            <a
-              class="nws"
-              target="_blank"
-              href="https://www.ebay.de/contact/sendmsg?message_type_id=14&recipient=autoteile.dk"
-              ><i class="fa fa-comments-o fa-fw"></i> eBay Nachricht</a
-            >
-          </div>
-
-          <!-- Footer -->
-        </div>
-
         <!-- Wrapper -->
       </div>
       <!-- Hintergrund -->
     </div>
-
     <script>
-      const productImages = document.querySelectorAll(".product-image");
-      console.log(productImages);
+      const productImages = document.querySelectorAll(".product-img");
 
       productImages.forEach((image) => {
-        console.log(image.getAttribute("data-isset"));
+        const isSet = image.getAttribute("data-isset");
+
+        if (isSet === "false") {
+          image.style = "display: none;";
+        }
       });
     </script>
   </body>

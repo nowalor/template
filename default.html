@@ -527,6 +527,7 @@
       .artikelbilder.galerie > #slide16:checked ~ ul > .slide.pic16 {
         opacity: 1;
         z-index: 2;
+        position: absolute;
       }
       /* Animations */
       .artikelbilder.galerie > ul > .slide {
@@ -1351,7 +1352,7 @@
           <div
             style="
               width: 100%;
-              background-color: green;
+              background-color: #4bad32;
               height: 145px;
               padding: 12px;
               border-radius: 5px;
@@ -1395,6 +1396,18 @@
               <input
                 name="switch"
                 id="slide4"
+                class="anker slide"
+                type="radio"
+              />
+              <input
+                name="switch"
+                id="slide5"
+                class="anker slide"
+                type="radio"
+              />
+              <input
+                name="switch"
+                id="slide6"
                 class="anker slide"
                 type="radio"
               />
@@ -1520,15 +1533,27 @@
               >${PRODUCT.CustomFields.Brandstofftype}
             </p>
 
-            <h2>Artikeldetails</h2>
-            <ul>
-              <li>Merkmal 1</li>
-              <li>Merkmal 2</li>
-              <li>Merkmal 3</li>
-            </ul>
-
-            <h2>Kba</h2>
-            <span class="var">3333189</span>
+            <p>
+              <span class="bold">Model Jahr: </span
+              >${PRODUCT.CustomFields.ModelJahr}
+            </p>
+            <p>
+              <span class="bold">Fahrgestellnummer: </span
+              >${PRODUCT.CustomFields.Fahrgestellnummer}
+            </p>
+            <p>
+              <span class="bold">Motor Kennung: </span
+              >${PRODUCT.CustomFields.MotorKennung}
+            </p>
+            <p>
+              <span class="bold">Motortype: </span
+              >${PRODUCT.CustomFields.Motortype}
+            </p>
+            <p>
+              <span class="bold">Getriebe: </span
+              >${PRODUCT.CustomFields.Getriebe}
+            </p>
+            <p><span class="bold">Kba: </span>${PRODUCT.CustomFields.Kba}</p>
 
             <!-- Artikeldetails -->
           </div>
