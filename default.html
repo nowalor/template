@@ -15,6 +15,10 @@
 
       /* Copyright 2024 HTML/CSS by webmarx | https://www.ebay.de/str/webmarx | eBay Auktionsvorlage Avis v. 1.2 */
 
+      .none {
+        display: none;
+      }
+
       .bold {
         font-weight: bold;
         font-size: 14px !important;
@@ -397,6 +401,7 @@
         height: auto;
         z-index: 6;
         text-align: center;
+        padding: 0 7.5px;
       }
       .artikelbilder.galerie > .thumb > div {
         margin-left: -50%;
@@ -1416,43 +1421,37 @@
                 <li class="pic1 img slide">
                   <img
                     src="${PRODUCT.CustomFields.Image1}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image1isset}"
+                    class="${PRODUCT.CustomFields.Image1class}"
                   />
                 </li>
                 <li class="pic2 img slide">
                   <img
                     src="${PRODUCT.CustomFields.Image2}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image2isset}"
+                    class="${PRODUCT.CustomFields.Image2class}"
                   />
                 </li>
                 <li class="pic3 img slide">
                   <img
                     src="${PRODUCT.CustomFields.Image3}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image3isset}"
+                    class="${PRODUCT.CustomFields.Image3class}"
                   />
                 </li>
                 <li class="pic4 img slide">
                   <img
                     src="${PRODUCT.CustomFields.Image4}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image4isset}"
+                    class="${PRODUCT.CustomFields.Image4class}"
                   />
                 </li>
                 <li class="pic5 img slide">
                   <img
                     src="${PRODUCT.CustomFields.Image5}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image5isset}"
+                    class="${PRODUCT.CustomFields.Image5class}"
                   />
                 </li>
                 <li class="pic6 img slide">
                   <img
                     src="${PRODUCT.CustomFields.Image6}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image6isset}"
+                    class="${PRODUCT.CustomFields.Image6class}"
                   />
                 </li>
               </ul>
@@ -1463,43 +1462,36 @@
                   ><span class="anker"></span>
                   <img
                     src="${PRODUCT.CustomFields.Image1}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image1isset}"
+                    class="${PRODUCT.CustomFields.Image1class}"
                 /></label>
                 <label class="pic2 col-xs-3" for="slide2"
                   ><span class="anker"></span>
                   <img
                     src="${PRODUCT.CustomFields.Image2}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image2isset}"
+                    class="${PRODUCT.CustomFields.Image2class}"
                 /></label>
                 <label class="pic3 col-xs-3" for="slide3"
-                  ><span class="anker"></span>
-                  <img
-                    src="${PRODUCT.CustomFields.Image3}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image3isset}"
-                /></label>
+                  ><span class="anker"></span> <img
+                  src="${PRODUCT.CustomFields.Image3}" class="product-img
+                  ${PRODUCT.CustomFields.Image3class}"" /></label
+                >
                 <label class="pic4 col-xs-3" for="slide4"
                   ><span class="anker"></span>
                   <img
                     src="${PRODUCT.CustomFields.Image4}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image4isset}"
+                    class="${PRODUCT.CustomFields.Image4class}"
                 /></label>
                 <label class="pic5 col-xs-3" for="slide5"
                   ><span class="anker"></span>
                   <img
                     src="${PRODUCT.CustomFields.Image5}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image5isset}"
+                    class="${PRODUCT.CustomFields.Image5class}"
                 /></label>
                 <label class="pic6 col-xs-3" for="slide6"
                   ><span class="anker"></span>
                   <img
                     src="${PRODUCT.CustomFields.Image6}"
-                    class="product-img"
-                    data-isset="${PRODUCT.CustomFields.Image6isset}"
+                    class="${PRODUCT.CustomFields.Image6class}"
                 /></label>
                 <!-- Thumbnails -->
               </div>
@@ -1514,7 +1506,8 @@
             <p>
               Einzelne auf den Fotos abgebildeten Anbauteile sind eventuel nicht
               mit im Lieferumfang enthalten. Mitglieferte Anbauteile sind von
-              der Gewährleistung ausgeschlossen.
+              der Gewährleistung ausgeschlossen. Bei Fragen kontakten Sie uns
+              bitte, unser Kundenservice spricht natürlich deutsch.
             </p>
             <p>
               <span class="bold">Lagernummer: </span
@@ -1565,16 +1558,5 @@
       </div>
       <!-- Hintergrund -->
     </div>
-    <script>
-      const productImages = document.querySelectorAll(".product-img");
-
-      productImages.forEach((image) => {
-        const isSet = image.getAttribute("data-isset");
-
-        if (isSet === "false") {
-          image.style = "display: none;";
-        }
-      });
-    </script>
   </body>
 </html>
